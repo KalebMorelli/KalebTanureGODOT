@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1hxyprmis21q"]
+
+[sub_resource type="GDScript" id="GDScript_66xvs"]
+script/source = "extends CanvasLayer
+
+func _ready():
+	visible = false
+	
+"
+
+[node name="MenuGameOver" type="CanvasLayer"]
+script = SubResource("GDScript_66xvs")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 559.0
+offset_top = 301.0
+offset_right = 760.0
+offset_bottom = 452.0
+
+[node name="BotaoReiniciar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Reiniciar
+"
+
+[node name="BotaoQuit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Sair
+"
