@@ -8,6 +8,6 @@ func _ready():
 
 func resetar():
 	$GameOver.visible = true
-	get_tree().change_scene_to_file("res://GameOver.tscn")
+	#get_tree().change_scene_to_file("res://GameOver.tscn")
 
 

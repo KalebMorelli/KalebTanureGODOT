@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@onready var DT_Colisao := $DT_Colisao as RayCast2D
-@onready var DT_Colisao2 := $DT_Colisao2 as RayCast2D
+@onready var DT_Colisao := $DT_ColisaoAranha as RayCast2D
+@onready var DT_Colisao2 := $DT_ColisaoAranha2 as RayCast2D
 
 @export var jogador : CharacterBody2D
 const SPEED = 1850.0
@@ -17,9 +17,9 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 	if DT_Colisao.is_colliding():
 		direction *= -1
-		$AnimacaoEsqueleto.flip_h = false
+		$AnimacaoAranha.flip_h = false
 	if DT_Colisao2.is_colliding():
-		$AnimacaoEsqueleto.flip_h = true
+		$AnimacaoAranha.flip_h = true
 		direction *= -1
 	
 
